@@ -13,7 +13,7 @@ provider "google" {
   zone        = "us-west4-a" //us-centra1-c
 }
 
-resource "google_compute_instance" "sach-poc-vm" {
+resource "google_compute_instance" "<<<machine name>>>" {
   name         = local.instance_name
   machine_type = local.machine_type
   boot_disk {
@@ -31,7 +31,7 @@ resource "google_compute_instance" "sach-poc-vm" {
 variable "credentials_file" {
   type        = string
   description = "credentials"
-  default     = "sachproj1-d27b607e8336.json"
+  default     = "<<jsn file for credentials>>"
 }
 variable "region" {
   type        = string
@@ -39,7 +39,7 @@ variable "region" {
   default     = "us-west4"
 }
 locals {
-  instance_name = "sach-poc-vm"
+  instance_name = "<<machine name>>>"
   instance_zone = "us-central1-a"
   machine_type  = "e2-medium"
   image         = "ubuntu-os-cloud/ubuntu-2004-lts"
